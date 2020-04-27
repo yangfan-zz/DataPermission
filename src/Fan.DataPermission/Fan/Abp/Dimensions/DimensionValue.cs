@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Collections.Immutable;
-using Volo.Abp;
+﻿using Volo.Abp;
 
 namespace Fan.Abp.Dimensions
 {
  
     /// <summary>
-    /// 
+    /// 维度值
     /// </summary>
     public class DimensionValue : NameValue<string>
     {

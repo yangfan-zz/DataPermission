@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Ddd.Domain" Version="2.6.2" />
     <ProjectReference Include="..\Fan.DataPermission.Domain.Shared\Fan.DataPermission.Domain.Shared.csproj" />
+    <ProjectReference Include="..\Fan.DataPermission\Fan.DataPermission.csproj" />
   </ItemGroup>
 
 </Project>
