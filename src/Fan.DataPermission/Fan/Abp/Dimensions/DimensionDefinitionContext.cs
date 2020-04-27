@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.Immutable;
 
-namespace Fan.DataPermission
+namespace Fan.Abp.Dimensions
 {
     /// <summary>
     /// 维度定义的上下文

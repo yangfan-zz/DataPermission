@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Modularity;
 
-namespace Fan.DataPermission
+namespace Fan.Abp.Dimensions
 {
     public class DataPermissionModule : AbpModule
     {

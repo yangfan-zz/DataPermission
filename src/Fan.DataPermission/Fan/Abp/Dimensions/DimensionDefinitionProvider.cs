@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.DependencyInjection;
 
-namespace Fan.DataPermission
+namespace Fan.Abp.Dimensions
 {
     public abstract class DimensionDefinitionProvider : IDimensionDefinitionProvider, ITransientDependency
     {

@@ -1,4 +1,4 @@
-﻿namespace Fan.DataPermission
+﻿namespace Fan.Abp.Dimensions
 {
     public class DimensionDefinition
     {

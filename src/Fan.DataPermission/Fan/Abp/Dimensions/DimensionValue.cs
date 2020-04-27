@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Volo.Abp;
+﻿using Volo.Abp;
 
-namespace Fan.DataPermission
+namespace Fan.Abp.Dimensions
 {
     /// <summary>
     /// 维度值
