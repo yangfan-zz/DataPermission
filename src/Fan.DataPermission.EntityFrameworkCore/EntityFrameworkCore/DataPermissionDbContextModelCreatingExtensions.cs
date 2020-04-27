@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace Fan.DataPermission.EntityFrameworkCore
 {
@@ -19,25 +20,27 @@ namespace Fan.DataPermission.EntityFrameworkCore
 
             optionsAction?.Invoke(options);
 
-            /* Configure all entities here. Example:
+            // Configure all entities here. Example:
 
-            builder.Entity<Question>(b =>
+            builder.Entity<PermissionData>(b =>
             {
                 //Configure table & schema name
-                b.ToTable(options.TablePrefix + "Questions", options.Schema);
+                b.ToTable(options.TablePrefix + "PermissionData", options.Schema);
             
                 b.ConfigureByConvention();
-            
-                //Properties
-                b.Property(q => q.Title).IsRequired().HasMaxLength(QuestionConsts.MaxTitleLength);
-                
-                //Relations
-                b.HasMany(question => question.Tags).WithOne().HasForeignKey(qt => qt.QuestionId);
+                b.ConfigureExtraProperties();
 
-                //Indexes
-                b.HasIndex(q => q.CreationTime);
+                b.Property(x => x.Name).HasMaxLength(PermissionDataConsts.MaxNameLength).IsRequired();
+                b.Property(x => x.ProviderName).HasMaxLength(PermissionDataConsts.MaxProviderNameLength).IsRequired();
+                b.Property(x => x.ProviderKey).HasMaxLength(PermissionDataConsts.MaxProviderKeyLength).IsRequired();
+
+                b.Property(x => x.Description).HasMaxLength(PermissionDataConsts.MaxDescriptionLength);
+
+                b.HasIndex(x => new { x.Name, x.ProviderName, x.ProviderKey });
+
+                b.Ignore(x => x.ItemGroup);
             });
-            */
+           
         }
     }
 }
