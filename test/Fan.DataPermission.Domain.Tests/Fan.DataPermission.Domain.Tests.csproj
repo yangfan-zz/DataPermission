@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Fan.DataPermission</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <ProjectReference Include="..\Fan.DataPermission.EntityFrameworkCore.Tests\Fan.DataPermission.EntityFrameworkCore.Tests.csproj" />
+  </ItemGroup>
+
+</Project>
