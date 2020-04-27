@@ -1,21 +1,19 @@
-﻿using System.Collections.Generic;
-using System.Collections.Immutable;
+﻿using Fan.Abp.Dimensions;
 using Volo.Abp;
 
-namespace Fan.Abp.Dimensions
+namespace Fan.Abp.DataPermission
 {
- 
     /// <summary>
     /// 
     /// </summary>
-    public class DimensionValue : NameValue<string>
+    public class PermissionDataItem : NameValue<string>
     {
-        public DimensionValue()
+        public PermissionDataItem()
         {
 
         }
 
-        public DimensionValue(string name, string value)
+        public PermissionDataItem(string name, string value)
         {
             Name = name;
             Value = value;
